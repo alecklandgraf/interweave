@@ -484,7 +484,7 @@ export default class Parser {
         // Apply transformation second
         let children;
 
-        if (transform) {
+        if (transform && nextNode !== node) {
           this.keyIndex += 1;
           const key = this.keyIndex;
 

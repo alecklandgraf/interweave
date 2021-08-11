@@ -348,13 +348,7 @@ exports[`Interweave renders using a custom container element 1`] = `
 
 exports[`Interweave transform prop allows blocked 1`] = `
 <Element tagName="span">
-  <span>
-    Foo 
-    <Dummy>
-      <iframe title="foo" />
-    </Dummy>
-     Bar
-  </span>
+  <span>Foo  Bar</span>
 </Element>
 `;
 
@@ -362,9 +356,9 @@ exports[`Interweave transform prop replaces the element 1`] = `
 <Element tagName="span">
   <span>
     Foo 
-    <Dummy>
-      <div />
-    </Dummy>
+    <Element selfClose tagName="img">
+      <img />
+    </Element>
      Bar
   </span>
 </Element>
@@ -372,6 +366,12 @@ exports[`Interweave transform prop replaces the element 1`] = `
 
 exports[`Interweave transform prop skips the element 1`] = `
 <Element tagName="span">
-  <span>Foo  Bar</span>
+  <span>
+    Foo 
+    <Element selfClose tagName="img">
+      <img />
+    </Element>
+     Bar
+  </span>
 </Element>
 `;
